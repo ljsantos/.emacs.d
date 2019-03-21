@@ -9,3 +9,9 @@
 
 # Undo-tree save-files
 *.~undo-tree
+
+# Installed packages
+elpa/*
+
+# Internal Files
+auto-save-list/*
