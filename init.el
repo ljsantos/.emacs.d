@@ -103,7 +103,7 @@
     ))
 
 ; EPC
-(use-package 'epc
+(use-package epc
   :ensure t)
 
 ; Autocomplete Mode
