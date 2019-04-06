@@ -14,17 +14,22 @@
 (setq use-package-always-ensure t)
 
 ;; Adicionando tema e aparência
-
 (use-package doom-themes
-	     :config
-	     (setq doom-themes-enable-bold t
-		   doom-themes-enable-italic t)
-	     (load-theme 'doom-one t)
-	     (doom-themes-visual-bell-config)
-	     )
+  :config
+  (setq doom-themes-enable-bold t
+	doom-themes-enable-italic t)
+  (load-theme 'doom-one t)
+  (doom-themes-visual-bell-config)
+  )
 (use-package powerline
-	     :config
-	     (powerline-default-theme)
-	     )
+  :config
+  (powerline-default-theme)
+  )
 
-
+; Realçar linha atual
+(global-hl-line-mode t)
+; Piscar linha atual
+(use-package beacon
+  :config
+  (beacon-mode 1)
+  )
