@@ -102,6 +102,10 @@
     (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
     ))
 
+; EPC
+(use-package 'epc
+  :ensure t)
+
 ; Autocomplete Mode
 (use-package auto-complete 
   :ensure t
