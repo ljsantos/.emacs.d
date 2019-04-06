@@ -10,8 +10,14 @@
 ;; Instalar Pacote para manipulação de Pacotes
 (unless (package-installed-p 'use-package)
   (package-install 'use-package))
+(unless (package-installed-p 'use-package-ensure)
+  (package-install 'use-package-ensure))
 (setq use-package-verbose t)
 (setq use-package-always-ensure t)
+
+;; utilizar pacotes temporariamente
+(use-package try
+  :ensure t)
 
 ;; Adicionando tema e aparência
 (use-package doom-themes
