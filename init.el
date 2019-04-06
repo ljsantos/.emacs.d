@@ -121,3 +121,18 @@
 
 (add-hook 'python-mode-hook 'my/python-mode-hook)
 
+; Python mode
+(setq py-python-command "python3")
+(setq python-shell-interpreter "python3")
+
+
+(use-package elpy
+  :ensure t
+  :config 
+  (elpy-enable))
+
+(use-package virtualenvwrapper
+  :ensure t
+  :config
+  (venv-initialize-interactive-shells)
+  (venv-initialize-eshell))
