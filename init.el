@@ -9,10 +9,7 @@
 
 ;; Instalar Pacote para manipulação de Pacotes
 (unless (package-installed-p 'use-package)
-  (package-install 'use-package))
-(unless (package-installed-p 'use-package-ensure)
-  (package-install 'use-package-ensure))
-(setq use-package-verbose t)
+  (package-install 'use-package))(setq use-package-verbose t)
 (setq use-package-always-ensure t)
 
 ;; utilizar pacotes temporariamente
@@ -21,6 +18,7 @@
 
 ;; Adicionando tema e aparência
 (use-package doom-themes
+  :ensure t
   :config
   (setq doom-themes-enable-bold t
 	doom-themes-enable-italic t)
@@ -28,6 +26,7 @@
   (doom-themes-visual-bell-config)
   )
 (use-package powerline
+  :ensure t
   :config
   (powerline-default-theme)
   )
@@ -42,18 +41,20 @@
 
 ; Facilitar a troca de janelas
 (use-package ace-window
-:init
-(progn
-(setq aw-scope 'global) ;; was frame
-(global-set-key (kbd "C-x O") 'other-frame)
-  (global-set-key [remap other-window] 'ace-window)
-  (custom-set-faces
-   '(aw-leading-char-face
-     ((t (:inherit ace-jump-face-foreground :height 3.0))))) 
-  ))
+  :ensure t
+  :init
+  (progn
+    (setq aw-scope 'global) ;; was frame
+    (global-set-key (kbd "C-x O") 'other-frame)
+    (global-set-key [remap other-window] 'ace-window)
+    (custom-set-faces
+     '(aw-leading-char-face
+       ((t (:inherit ace-jump-face-foreground :height 3.0))))) 
+    ))
 
 ; Counsel
 (use-package counsel
+  :ensure t
   :bind
   (("M-y" . counsel-yank-pop)
    :map ivy-minibuffer-map
@@ -61,6 +62,7 @@
 
 ; Ivy
 (use-package ivy
+  :ensure t
   :diminish (ivy-mode)
   :bind (("C-x b" . ivy-switch-buffer))
   :config
