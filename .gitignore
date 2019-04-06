@@ -17,3 +17,5 @@ elpa/*
 auto-save-list/*
 abbrev_defs
 recentf
+ac-comphist.dat
+snippets/*
