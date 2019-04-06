@@ -16,3 +16,4 @@ elpa/*
 # Internal Files
 auto-save-list/*
 abbrev_defs
+recentf
