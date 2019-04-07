@@ -338,3 +338,12 @@ Git gutter:
   (dumb-jump-mode)
   :ensure
   )
+
+; Smartparens
+(use-package smartparens
+  :hook (prog-mode . smartparens-mode)
+  :custom
+  (sp-escape-quotes-after-insert nil)
+  :config
+  (require 'smartparens-config))
+(show-paren-mode t)
