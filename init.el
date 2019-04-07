@@ -355,3 +355,7 @@ Git gutter:
   :config
   (projectile-global-mode)
   (setq projectile-completion-system 'ivy))
+
+; mark and edit all copies of the marked region simultaniously. 
+(use-package iedit
+  :ensure t)
