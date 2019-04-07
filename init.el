@@ -316,3 +316,12 @@ Git gutter:
   :ensure t
   )
 (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
+
+; Wgrep
+(use-package wgrep
+  :ensure t
+  )
+(use-package wgrep-ag
+  :ensure t
+  )
+(require 'wgrep-ag)
