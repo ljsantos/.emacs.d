@@ -362,6 +362,13 @@ Git gutter:
 (use-package iedit
   :ensure t)
 
+; Narrowing and windowing
+
+
+; AutoSnippet
+(use-package auto-yasnippet
+  :ensure t)
+
 ; deletes all the whitespace when you hit backspace or delete
 (use-package hungry-delete
   :ensure t
