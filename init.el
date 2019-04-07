@@ -359,3 +359,9 @@ Git gutter:
 ; mark and edit all copies of the marked region simultaniously. 
 (use-package iedit
   :ensure t)
+
+; deletes all the whitespace when you hit backspace or delete
+(use-package hungry-delete
+  :ensure t
+  :config
+  (global-hungry-delete-mode))
