@@ -347,3 +347,11 @@ Git gutter:
   :config
   (require 'smartparens-config))
 (show-paren-mode t)
+
+; Projectile
+(use-package projectile
+  :ensure t
+  :bind ("C-c p" . projectile-command-map)
+  :config
+  (projectile-global-mode)
+  (setq projectile-completion-system 'ivy))
