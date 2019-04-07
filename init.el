@@ -25,10 +25,15 @@
   (load-theme 'doom-one t)
   (doom-themes-visual-bell-config)
   )
-(use-package powerline
+;(use-package powerline
+;  :ensure t
+;  :config
+;  (powerline-default-theme)
+;  )
+(use-package doom-modeline
   :ensure t
   :config
-  (powerline-default-theme)
+  (doom-modeline-init)
   )
 
 ; Realçar linha atual
