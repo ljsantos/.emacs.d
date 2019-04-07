@@ -131,6 +131,7 @@
   )
 
 ; Python
+; Install pip install jedi
 (eval-after-load 'python-mode
   '(bind-key "C-c C-c" 'compile python-mode-map))
 (defun my/python-mode-hook ()
@@ -151,6 +152,7 @@
 (add-hook 'python-mode-hook 'my/python-mode-hook)
 
 ; Python mode
+; Tips - Run pip install epc
 (setq py-python-command "python3")
 (setq python-shell-interpreter "python3")
 
@@ -298,8 +300,8 @@ Git gutter:
               (sit-for 0.1)
               (git-gutter:clear))
    :color blue))
-
 ; All the icons
+; Run after M-x all-the-icons-install-fonts
 (use-package all-the-icons 
   :ensure t
   :defer 0.5)
