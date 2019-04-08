@@ -153,10 +153,8 @@
 
 ; Python mode
 ; Tips - Run pip install epc
-(setq py-python-command "python3")
-(setq python-shell-interpreter "python3")
-
-
+(setq py-python-command "python")
+(setq python-shell-interpreter "python")
 (use-package elpy
   :ensure t
   :config 
@@ -167,6 +165,26 @@
   :config
   (venv-initialize-interactive-shells)
   (venv-initialize-eshell))
+
+(use-package websocket
+  :ensure t)
+
+(use-package request
+  :ensure t)
+
+(use-package s
+  :ensure t)
+
+(use-package skewer-mode
+  :ensure t)
+
+(use-package ein
+  :ensure t
+  :config
+  (require 'ein-notebook)
+  (require 'ein-subpackages)
+  )
+(setq ein:completion-backend 'ein:use-ac-jedi-backend)
 
 ; Snippets 
 (use-package yasnippet
@@ -401,3 +419,17 @@ narrowed."
   :ensure t
   :config
   (global-hungry-delete-mode))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (ein-subpackages ein-notebook ein yasnippet-snippets wgrep-ag virtualenvwrapper virtualenv use-package try smartparens projectile powerline multiple-cursors magit jedi iedit hydra hungry-delete git-timemachine git-gutter expand-region elpy dumb-jump doom-themes doom-modeline counsel company-jedi beacon auto-yasnippet all-the-icons-ivy all-the-icons-dired ace-window))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(aw-leading-char-face ((t (:inherit ace-jump-face-foreground :height 3.0)))))
